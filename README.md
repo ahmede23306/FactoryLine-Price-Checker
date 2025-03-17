@@ -1,56 +1,87 @@
 # Product Management System
 
-## Description
-This C++ program allows users to manage a list of products by storing and processing information about their pricing, quantities, and sales. It includes functionalities such as:
-
-- Inputting product details (serial number, quantity, sales, prices, etc.).
-- Calculating the net price based on base price and taxes.
-- Checking if the net price exceeds the maximum allowed price.
-- Finding products with lower quantities than a given threshold.
-- Identifying the product with the highest sales.
-- Applying a 50% discount to products with low stock.
-- Displaying all product details.
-- Listing products with prices below a specified value.
+This is a simple C++ console-based product management system that allows users to store, manage, and analyze product data, including pricing, sales, and stock information.
 
 ## Features
-- **Dynamic Memory Allocation**: The program dynamically allocates memory for an array of products based on user input.
-- **Menu-Driven Interface**: Users can interactively choose from different operations.
-- **Error Handling**: Ensures proper input validation and control flow.
+- Add product details (serial number, quantity, total sales, pricing, and tax calculations).
+- Calculate net price based on base price and tax percentage.
+- Compare net price with maximum allowed price.
+- Display products with low stock.
+- Identify the product with the highest sales.
+- Apply a 50% discount to products with low stock.
+- Display all product details.
+- Find products priced below a specific value.
 
-## How to Run
-1. Compile the program using a C++ compiler (e.g., g++):
+## Usage Example
+1. **Compile and Run the Program:**
    ```sh
-   g++ -o product_manager main.cpp
+   g++ product_management.cpp -o product_management
+   ./product_management
    ```
-2. Run the executable:
-   ```sh
-   ./product_manager
+
+2. **Enter the number of products:**
    ```
-3. Follow the on-screen instructions to input product details and select operations.
+   Enter the number of products: 3
+   ```
 
-## Example Usage
-```
-Enter the number of products: 2
-Data of product number #1
-Enter the product serial number: 101
-Enter the quantity of the product: 10
-Enter the total sales of the product: 500
-Enter the base price of the product: 50
-Enter the taxes of the product: 10
-Enter the maximum price of the product: 70
-The net price of the product is: 55
-The product net price is accepted.
-...
-```
+3. **Input product details for each product:**
+   ```
+   Data of product number #1
+   Enter the product serial number: 101
+   Enter the quantity of the product: 5
+   Enter the total sales of the product: 1500
+   Enter the base price of the product: 200
+   Enter the taxes of the product: 10
+   Enter the maximum price of the product: 250
+   The net price of the product is: 220
+   The product net price is accepted.
+   ```
 
-## Requirements
-- C++ compiler (GCC, Clang, MSVC, etc.)
-- Standard C++ Libraries
+4. **Choose an operation from the menu:**
+   ```
+   Please enter a number:
+   1 - Get products with quantity less than a specific value
+   2 - Get the product with the highest sales
+   3 - Apply 50% discount to products with quantity less than 6
+   4 - Display all products
+   5 - Get products under a specific price
+   ```
+
+5. **Example Actions:**
+   - Find products with quantity less than a certain value:
+     ```
+     Enter the value of the quantity: 10
+     Product: 101
+     ```
+   - Get the product with the highest sales:
+     ```
+     The product with the highest sales has the serial number: 103
+     ```
+   - Apply 50% discount to low-stock products:
+     ```
+     The new price of product 101 is: 110
+     ```
+   - Display all products:
+     ```
+     Product number #1
+     Serial number: 101
+     Quantity: 5
+     Total sales: 1500
+     Base price: 200
+     Taxes: 10
+     Maximum price: 250
+     Net price: 220
+     ```
+
+6. **Exit or Continue:**
+   ```
+   Do you want to enter the data of another product? (y/n): n
+   ```
 
 ## Future Improvements
-- Implement file handling to save and load product data.
-- Add a graphical user interface (GUI) for better interaction.
-- Optimize the structure using object-oriented programming (OOP) principles.
+- Implement file storage to save and retrieve product data.
+- Add a graphical user interface (GUI) for better usability.
+- Enhance error handling and input validation.
 
-## License
-This project is open-source and available under the MIT License.
+## Author
+Developed by Ahmed Eid
