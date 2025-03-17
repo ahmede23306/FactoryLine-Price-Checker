@@ -133,11 +133,10 @@ int main()
            break;  
        default:  
            cout << "Invalid choice" << endl;  
-           break;  
-       }  
+           break;
+       }
        cout << "Do you want to enter the data of another product? (y/n): ";  
-       cin >> continueChoice;  
-   } while (continueChoice == 'y' || continueChoice == 'Y');  
-
-   delete[] products;  
+       cin >> continueChoice;
+   } while (continueChoice == 'y' || continueChoice == 'Y');
+   delete[] products;
 }
