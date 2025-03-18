@@ -1,87 +1,62 @@
 # Product Management System
 
-This is a simple C++ console-based product management system that allows users to store, manage, and analyze product data, including pricing, sales, and stock information.
+This is a C++ program for managing product inventory, tracking daily sales, and analyzing sales performance over a month. The system allows users to enter product details, analyze sales data, and apply discounts.
 
 ## Features
-- Add product details (serial number, quantity, total sales, pricing, and tax calculations).
-- Calculate net price based on base price and tax percentage.
-- Compare net price with maximum allowed price.
-- Display products with low stock.
-- Identify the product with the highest sales.
-- Apply a 50% discount to products with low stock.
-- Display all product details.
-- Find products priced below a specific value.
 
-## Usage Example
-1. **Compile and Run the Program:**
+- Add product details (serial number, quantity, price, daily sales for the last month).
+- Display products with a quantity less than a specified value.
+- Display products under a specific price.
+- Identify the product with the highest sales.
+- Apply a 50% discount for products with a quantity less than 6.
+- Display all product details.
+- Calculate the average monthly sales for each product.
+
+## Requirements
+
+- C++ compiler (GCC, MSVC, Clang, etc.)
+
+## How to Compile and Run
+
+1. Clone this repository:
    ```sh
-   g++ product_management.cpp -o product_management
+   git clone https://github.com/your-username/product-management.git
+   cd product-management
+   ```
+2. Compile the program:
+   ```sh
+   g++ -o product_management main.cpp
+   ```
+3. Run the executable:
+   ```sh
    ./product_management
    ```
 
-2. **Enter the number of products:**
-   ```
-   Enter the number of products: 3
-   ```
+## Usage
 
-3. **Input product details for each product:**
-   ```
-   Data of product number #1
-   Enter the product serial number: 101
-   Enter the quantity of the product: 5
-   Enter the total sales of the product: 1500
-   Enter the base price of the product: 200
-   Enter the taxes of the product: 10
-   Enter the maximum price of the product: 250
-   The net price of the product is: 220
-   The product net price is accepted.
-   ```
+1. Enter product details when prompted.
+2. Choose an operation from the menu:
+   - `1` → Display products with a quantity less than a specified value.
+   - `2` → Identify the product with the highest sales.
+   - `3` → Apply a 50% discount to low-stock products.
+   - `4` → Display all product details.
+   - `5` → Display products under a specified price.
+   - `6` → Calculate the average monthly sales for each product.
+3. Follow the prompts to interact with the system.
 
-4. **Choose an operation from the menu:**
-   ```
-   Please enter a number:
-   1 - Get products with quantity less than a specific value
-   2 - Get the product with the highest sales
-   3 - Apply 50% discount to products with quantity less than 6
-   4 - Display all products
-   5 - Get products under a specific price
-   ```
+## Example Interaction
+```
+Data of product number #1
+Enter the product serial number: 101
+Enter the quantity of the product: 5
+Enter the price of the product: 50.5
+...
+Enter your choice: 2
+The product with the highest sales is: 101
+```
 
-5. **Example Actions:**
-   - Find products with quantity less than a certain value:
-     ```
-     Enter the value of the quantity: 10
-     Product: 101
-     ```
-   - Get the product with the highest sales:
-     ```
-     The product with the highest sales has the serial number: 103
-     ```
-   - Apply 50% discount to low-stock products:
-     ```
-     The new price of product 101 is: 110
-     ```
-   - Display all products:
-     ```
-     Product number #1
-     Serial number: 101
-     Quantity: 5
-     Total sales: 1500
-     Base price: 200
-     Taxes: 10
-     Maximum price: 250
-     Net price: 220
-     ```
-
-6. **Exit or Continue:**
-   ```
-   Do you want to enter the data of another product? (y/n): n
-   ```
-
-## Future Improvements
-- Implement file storage to save and retrieve product data.
-- Add a graphical user interface (GUI) for better usability.
-- Enhance error handling and input validation.
+## License
+This project is licensed under the MIT License.
 
 ## Author
-Developed by Ahmed Eid
+Ahmed Eid
